@@ -64,7 +64,7 @@ metadata:
   name: schemaregistry
   namespace: cfk-gitops
 spec:
-  replicas: 1
+  replicas: 2
   image:
     application: confluentinc/cp-schema-registry:7.0.0
     init: confluentinc/confluent-init-container:2.2.0-1
