@@ -4,6 +4,6 @@ resources:
 - confluent-platform.yaml
 
 images:
-- name: cfk-gitops-demo
-  newName: cfk-gitops-demo
+- name: cfk-gitops
+  newName: cfk-gitops
   newTag: new
