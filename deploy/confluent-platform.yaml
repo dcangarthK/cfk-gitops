@@ -41,6 +41,18 @@ spec:
       bootstrapEndpoint: kafka:9071
 ---
 apiVersion: platform.confluent.io/v1beta1
+kind: KsqlDB
+metadata:
+  name: ksqldb
+  namespace: cfk-gitops
+spec:
+  replicas: 1
+  image:
+    application: confluentinc/cp-ksqldb-server:7.0.1
+    init: confluentinc/confluent-init-container:2.2.0-1
+  dataVolumeCapacity: 5Gi
+---
+apiVersion: platform.confluent.io/v1beta1
 kind: ControlCenter
 metadata:
   name: controlcenter
