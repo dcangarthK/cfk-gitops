@@ -1,5 +1,5 @@
 ---
-apiVersion: platform.confluent.io/v1beta1
+apiVersion: platform.cfk-gitops.io/v1beta1
 kind: Zookeeper
 metadata:
   name: zookeeper
@@ -12,7 +12,7 @@ spec:
   dataVolumeCapacity: 10Gi
   logVolumeCapacity: 10Gi
 ---
-apiVersion: platform.confluent.io/v1beta1
+apiVersion: platform.cfk-gitops.io/v1beta1
 kind: Kafka
 metadata:
   name: kafka
@@ -26,7 +26,7 @@ spec:
   metricReporter:
     enabled: true
 ---
-apiVersion: platform.confluent.io/v1beta1
+apiVersion: platform.cfk-gitops.io/v1beta1
 kind: Connect
 metadata:
   name: connect
@@ -40,7 +40,7 @@ spec:
     kafka:
       bootstrapEndpoint: kafka:9071
 ---
-apiVersion: platform.confluent.io/v1beta1
+apiVersion: platform.cfk-gitops.io/v1beta1
 kind: ControlCenter
 metadata:
   name: controlcenter
@@ -53,12 +53,12 @@ spec:
   dataVolumeCapacity: 10Gi
   dependencies:
     schemaRegistry:
-      url: http://schemaregistry.confluent.svc.cluster.local:8081
+      url: http://schemaregistry.cfk-gitops.svc.cluster.local:8081
     connect:
     - name: connect
-      url: http://connect.confluent.svc.cluster.local:8083
+      url: http://connect.cfk-gitops.svc.cluster.local:8083
 ---
-apiVersion: platform.confluent.io/v1beta1
+apiVersion: platform.cfk-gitops.io/v1beta1
 kind: SchemaRegistry
 metadata:
   name: schemaregistry
@@ -69,7 +69,7 @@ spec:
     application: confluentinc/cp-schema-registry:7.0.0
     init: confluentinc/confluent-init-container:2.2.0-1
 ---
-apiVersion: platform.confluent.io/v1beta1
+apiVersion: platform.cfk-gitops.io/v1beta1
 kind: KafkaRestProxy
 metadata:
   name: kafkarestproxy
