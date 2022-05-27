@@ -66,6 +66,9 @@ spec:
   dependencies:
     schemaRegistry:
       url: http://schemaregistry.cfk-gitops.svc.cluster.local:8081
+    ksqldb:
+    - name: ksqldb
+      url: http://ksqldb.cfk-gitops.svc.cluster.local:8088
     connect:
     - name: connect
       url: http://connect.cfk-gitops.svc.cluster.local:8083
