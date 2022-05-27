@@ -3,7 +3,7 @@ apiVersion: platform.confluent.io/v1beta1
 kind: Zookeeper
 metadata:
   name: zookeeper
-  namespace: cfk-gitops-demo
+  namespace: cfk-gitops
 spec:
   replicas: 0
   image:
@@ -16,7 +16,7 @@ apiVersion: platform.confluent.io/v1beta1
 kind: Kafka
 metadata:
   name: kafka
-  namespace: cfk-gitops-demo
+  namespace: cfk-gitops
 spec:
   replicas: 0
   image:
@@ -30,7 +30,7 @@ apiVersion: platform.confluent.io/v1beta1
 kind: Connect
 metadata:
   name: connect
-  namespace: cfk-gitops-demo
+  namespace: cfk-gitops
 spec:
   replicas: 0
   image:
@@ -44,7 +44,7 @@ apiVersion: platform.confluent.io/v1beta1
 kind: ControlCenter
 metadata:
   name: controlcenter
-  namespace: cfk-gitops-demo
+  namespace: cfk-gitops
 spec:
   replicas: 0
   image:
@@ -62,7 +62,7 @@ apiVersion: platform.confluent.io/v1beta1
 kind: SchemaRegistry
 metadata:
   name: schemaregistry
-  namespace: cfk-gitops-demo
+  namespace: cfk-gitops
 spec:
   replicas: 0
   image:
@@ -73,7 +73,7 @@ apiVersion: platform.confluent.io/v1beta1
 kind: KafkaRestProxy
 metadata:
   name: kafkarestproxy
-  namespace: cfk-gitops-demo
+  namespace: cfk-gitops
 spec:
   replicas: 0
   image:
