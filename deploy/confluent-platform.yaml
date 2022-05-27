@@ -5,7 +5,7 @@ metadata:
   name: zookeeper
   namespace: cfk-gitops
 spec:
-  replicas: 3
+  replicas: 0
   image:
     application: confluentinc/cp-zookeeper:7.0.0
     init: confluentinc/confluent-init-container:2.2.0-1
@@ -18,7 +18,7 @@ metadata:
   name: kafka
   namespace: cfk-gitops
 spec:
-  replicas: 3
+  replicas: 0
   image:
     application: confluentinc/cp-server:7.0.0
     init: confluentinc/confluent-init-container:2.2.0-1
@@ -32,7 +32,7 @@ metadata:
   name: connect
   namespace: cfk-gitops
 spec:
-  replicas: 1
+  replicas: 0
   image:
     application: confluentinc/cp-server-connect:7.0.0
     init: confluentinc/confluent-init-container:2.2.0-1
@@ -46,7 +46,7 @@ metadata:
   name: ksqldb
   namespace: cfk-gitops
 spec:
-  replicas: 1
+  replicas: 0
   image:
     application: confluentinc/cp-ksqldb-server:7.0.1
     init: confluentinc/confluent-init-container:2.2.0-1
@@ -58,7 +58,7 @@ metadata:
   name: controlcenter
   namespace: cfk-gitops
 spec:
-  replicas: 1
+  replicas: 0
   image:
     application: confluentinc/cp-enterprise-control-center:7.0.0
     init: confluentinc/confluent-init-container:2.2.0-1
@@ -79,7 +79,7 @@ metadata:
   name: schemaregistry
   namespace: cfk-gitops
 spec:
-  replicas: 2
+  replicas: 0
   image:
     application: confluentinc/cp-schema-registry:7.0.0
     init: confluentinc/confluent-init-container:2.2.0-1
@@ -90,7 +90,7 @@ metadata:
   name: kafkarestproxy
   namespace: cfk-gitops
 spec:
-  replicas: 1
+  replicas: 0
   image:
     application: confluentinc/cp-kafka-rest:7.0.0
     init: confluentinc/confluent-init-container:2.2.0-1
